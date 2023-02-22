@@ -25,6 +25,7 @@ clear
 
 read -p "DATABASE_USER: (default: 'root')" userDB
 
+
 #TODO: change by switch case
 if [[ -z $userDB ]]; then
     userDB='root'
@@ -49,7 +50,7 @@ if [[ -z $localipCustom ]]; then
     localipCustom=$localip
 fi 
 
-output="PORT:$port\nHOST:'$host'\nDATABASE_PORT:$portDB\nDATABASE_HOST:'$hostDB'\nLOCAL_IPv4:'$localipCustom'"
+output="PORT:$port\nHOST:'$host'\nDATABASE_PORT:$portDB\nDATABASE_HOST:'$hostDB'\nLOCAL_IPv4:'$localipCustom'\nDATABASE_USER:'$userDB'"
 
 echo -e $output >> .env
 
